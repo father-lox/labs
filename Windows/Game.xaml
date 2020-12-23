@@ -1,0 +1,36 @@
+﻿<Window x:Class="FL_NUMBER.Windows.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FL_NUMBER.Windows"
+        mc:Ignorable="d"
+        Background="Black"
+        Foreground="#666"
+        Title="Game" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" Width="400">
+            <DockPanel Margin="0 0 0 50" HorizontalAlignment="Stretch">
+                <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
+                    <TextBlock x:Name="gamerNick" Margin="0" Style="{StaticResource subtitel}" Text="ИМЯ_ИГРОКА_1"/>
+                    <TextBlock x:Name="gamerScore" Style="{StaticResource score}" Text="32"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
+                    <TextBlock x:Name="botNick" Margin="0" Style="{StaticResource subtitel}" Text="ИМЯ_ИГРОКА_2"/>
+                    <TextBlock x:Name="botScore" Style="{StaticResource score}" Text="72" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </DockPanel>
+            <ListBox x:Name="listNumbers" Margin="0 0 0 50" HorizontalAlignment="Center">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="buttonGetFirstNumber" Margin="0 0 5 0">ВЗЯТЬ ПЕРВОЕ</Button>
+                <Button x:Name="buttonGetLastNumber" Margin="5 0 0 0">ВЗЯТЬ ПОСЛЕДНЕЕ</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
